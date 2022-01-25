@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; 
+}
+
+/* Scroll bar customizing */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: inset 0 0 2px grey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(155, 155, 155);
+    border-radius: 3px;
+    outline: none;
+}
+
+/* Main styling */
+body {
+    background: #9be75c;
+    width: 80%;
+    margin: auto;
+}
+
+.wrapper {
+    margin: 50px auto;
+    padding: 15px 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+
+.wrapper .title {
+    font-weight: 800;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #111;
+}
+
+.wrapper .inputFields {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.wrapper .inputFields input[type='text'] {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin-right: 15px;
+    outline: none;
+    width: calc(100% - 45px);
+    height: 100%;
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 1rem;
+}
+
+.wrapper .inputFields input[type='text']:focus {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.wrapper .inputFields button.btn {
+    width: 30px;
+    height: 100%;
+    background: rgb(115, 255, 0);
+    color: white;
+    outline: none;
+    border: 0;
+    border-radius: 3px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.wrapper .inputFields button.btn:hover {
+    background-color: rgba(255, 230, 0, 0.7);
+}
+
+/* -------------- Content Section ------------ */
+
+.content {
+    max-height: 340px;
+    overflow: auto;
+    margin: 25px auto;
+    user-select: none;
+}
+
+.content ul li {
+    margin: 8px 0;
+    height: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content ul li:first-child {
+    margin-top: 0;
+}
+
+.content ul li:last-child {
+    margin-bottom: 0;
+}
+
+
+.content ul li .text-box {
+    width: calc(100% - 40px);
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    background-color: white;
+}
+
+.content input.text {
+    border-radius: 0;
+    border: none;
+    padding: 0 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+/* Buttons */
+.fa-edit, .fa-trash-alt, .fa-square, .fa-check-square, .fa-save {
+    cursor: pointer;
+    width: 30px;
+    height: 100%;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.fa-square, .fa-check-square {
+    background-color: green;
+    font-size: 20px;
+}
+
+.fa-edit, .fa-save {
+    background-color: grey;
+}
+
+.fa-trash-alt {
+    background-color: rgb(255, 0, 0);
+    margin-left: 10px;
+}
+
+i:hover {
+    opacity: 0.8;
+}
+
+/* javascript toggle classes */
+.strike-text {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+/* responsive design */
+@media only screen and (min-width: 740px) {
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 5px;
+        box-shadow: inset 0 0 3px grey;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: rgb(155, 155, 155);
+        border-radius: 5px;
+        outline: none;
+    }
+
+    body {
+        max-width: 700px;
+    }
+
+    .wrapper {
+        padding: 25px 30px;
+    }
+
+    .wrapper .title {
+        font-size: 2rem;
+    }
+
+    .wrapper .inputFields {
+        height: 50px;
+    }
+
+    .wrapper .inputFields input[type='text'] {
+        width: calc(100% - 65px);
+        font-size: 1.2rem;
+    }
+
+    .wrapper .inputFields button.btn {
+        width: 50px;
+    }
+
+    /* Todo elements */
+    .content {
+        margin: 50px auto;
+    }
+    
+    .content ul li {
+        height: 50px;
+    }
+
+    .content ul li .text-box {
+        grid-template-columns: 50px auto 50px;
+        width: calc(100% - 70px);
+    }
+
+    input.text {
+        font-size: 1.2rem;
+    }
+
+    /* Buttons  */
+    .fa-edit, .fa-trash-alt, .fa-square, .fa-check-square, .fa-save {
+        width: 50px;
+        font-size: 20px;
+    }
+
+    .fa-square, .fa-check-square {
+        font-size: 25px;
+    }
+
+    .fa-trash-alt {
+        margin-left: 20px;
+    }
+    
+}
